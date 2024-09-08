@@ -1,0 +1,52 @@
+// Main.kt
+fun main() {
+    // 1. Starting with Kotlin
+    println("Welcome to the Kotlin Basics Project")
+
+    // 2. Operators
+    val a = 10
+    val b = 5
+    println("Addition: ${a + b}")
+    println("Subtraction: ${a - b}")
+    println("Multiplication: ${a * b}")
+    println("Division: ${a / b}")
+    println("Modulus: ${a % b}")
+
+    // 3. Data Types
+    val integer: Int = 42
+    val floatingPoint: Double = 42.0
+    val character: Char = 'A'
+    val boolean: Boolean = true
+    println("Integer: $integer")
+    println("Floating Point: $floatingPoint")
+    println("Character: $character")
+    println("Boolean: $boolean")
+
+    // 4. Variables
+    var name: String = "Ahmed"
+    println("Name is: $name")
+    name = "Mohamed"
+    println("Updated name is: $name")
+
+    // 5. Conditionals
+    val age = 20
+    if (age >= 18) {
+        println("You are an adult")
+    } else {
+        println("You are a minor")
+    }
+
+    // 6. Lists and Arrays
+    val numbersList = listOf(1, 2, 3, 4, 5)
+    println("List: $numbersList")
+
+    val numbersArray = arrayOf(1, 2, 3, 4, 5)
+    println("Array: ${numbersArray.joinToString(", ")}")
+
+    // 7. Null Safety
+    var nullableString: String? = null
+    println("Nullable value: $nullableString")
+
+    nullableString = "Hello"
+    println("Non-nullable value: $nullableString")
+}

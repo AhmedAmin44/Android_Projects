@@ -1,0 +1,47 @@
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.fiveapp.TaskAdapter" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        tools:ignore="ExtraText">
+
+        <EditText
+            android:id="@+id/taskInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter task title"
+            android:layout_alignParentTop="true"/>
+
+        <Button
+            android:id="@+id/addTaskButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Task"
+            android:layout_below="@id/taskInput"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/completedTasksCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(viewModel.completedTasksCount.getValue())}"
+        android:textSize="20sp"
+        android:layout_below="@id/addTaskButton"
+        android:layout_marginTop="16dp"/>
+
+        <ListView
+            android:id="@+id/tasksListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/completedTasksCount"
+            android:layout_marginTop="16dp"/>
+    </RelativeLayout>
+</layout>
